@@ -1,0 +1,1270 @@
+/* ═══════════════════════════════════════════════════════════════
+   TWO LEAVES AND A BUD — style.css
+   ═══════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: 'Reckless';
+  src: url('./assets/Reckless.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('./assets/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/figtree.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Midnight';
+  src: url('./assets/midnight-sans.otf') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ── RESET ───────────────────────────── */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  /* cream background only shows in the header side margins */
+  background-color: #FBF9EC;
+}
+
+
+/* ── ANNOUNCEMENT BAR ────────────────── */
+
+.announcement-bar {
+  background-color: #2A2857;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+}
+
+
+
+
+header {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 16px 0 16px;
+  padding: 1.2vw 1.5vw;
+  position: relative;
+  z-index: 100;
+  border-radius: 12px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Left nav */
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav-item {
+  display: flex;
+  align-items: center;
+  font-family: 'Reckless', 'Helvetica Neue', Arial, sans-serif;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #272321;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.header-nav-item:hover {
+  opacity: 0.75;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-circle {
+  width: 1.4vw;
+  height: 1.4vw;
+  border: 1.5px solid #2A2624;
+  background-color: #C0DBFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Center logo */
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.header-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+
+/* Right links + cart */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-right a {
+  font-size: 0.8rem;
+  font-family: 'Roboto Mono','Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #201c1a;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-right a:hover {
+  opacity: 0.7;
+}
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-badge {
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  top: 6px;
+  right: -9px;
+  background-color: #FFB502;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 1.6vw;
+  height: 1.6vw;
+  border: 1px solid #201C1A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.page-top {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ── HERO SECTION ────────────────────── */
+
+.hero {
+  margin-top: -100px; 
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 94vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Full-cover background image */
+.hero-bg-img {
+  position: absolute;
+  margin-bottom: -2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  scale: 1.2;
+  z-index: 0;
+}
+
+
+/* Left text content */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 3vw 4vw;
+}
+
+.hero-headline {
+  font-family: 'Reckless', Georgia, 'Times New Roman', serif;
+  font-size: clamp(52px, 6.5vw, 80px);
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ffffff;
+  max-width: 500px;
+  margin-bottom: 1rem
+}
+
+.hero-cta {
+  display: inline-block;
+  background-color: #2A2857;
+  color: #ffffff;
+  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  padding: 1rem 4rem;
+  border-radius: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.hero-cta:hover {
+  background: #3a3330;
+  transform: translateY(-2px);
+}
+.drop-down {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+
+.drop-down:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+ 
+/* ── INTRO / TAGLINE + BEST SELLERS SECTION ── */
+ 
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:  8vw 6rem 5vw 5vw;
+  gap: 5rem;
+}
+ 
+.intro-tagline {
+  font-family: 'Reckless', Georgia, serif;
+  font-size: clamp(28px, 4vw, 90px);
+  font-weight: 400;
+  color: #201c1a;
+  text-align: center;
+  line-height: 1.2;
+}
+ 
+.intro-tagline em {
+  font-style: italic;
+}
+ 
+/* BEST SELLERS badge — lavender pill with bold black text + border */
+.best-sellers-badge {
+  display: inline-block;
+  background-color: #DAAEEA; /* lavender/lilac */
+  color: #201c1a;
+  font-family: 'Midnight';
+  font-size: clamp(20px, 4.5vw, 80px);
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+  margin-top: 4rem;
+  border-radius: 8px;
+  border: 2px solid #201c1a;
+  transform: rotate(-2deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── PRODUCT SHOWCASE (CSS-ONLY LAYOUT) ─────────────────────── */
+
+.products-showcase {
+  padding: 0 0 3.8rem 2.5rem;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.products-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.4rem;
+  width: 100%;
+  min-width: 2400px;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.4rem;
+  scrollbar-width: none;
+}
+
+.product-card {
+  scroll-snap-align: start;
+  min-width: 25vw;
+}
+
+.product-media {
+  border: 1px solid #201c1a;
+  border-radius: 8px;
+  height: 28vw;
+  position: relative;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tone-green { background: #C1EE91; }
+.tone-yellow { background: #FFD885; }
+.tone-mint { background: #B1E8C1; }
+.tone-blue { background: #C2E4F8; }
+.tone-peach { background: #f2cfbf; }
+.tone-sky { background: #9fcfeb; }
+
+.product-top-row {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.product-tag {
+  background: #f8f8f8;
+  border: 1px solid #201c1a;
+  border-radius: 8px;
+  padding: 0.1rem 0.35rem;
+  text-transform: uppercase;
+  font-family: 'Midnight';
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #201c1a;
+}
+
+.product-rating img {
+  width: 1vw;
+  height: 1vw;
+  display: block;
+}
+
+.product-packshot {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.quick-add-btn {
+  position: absolute;
+  right: 0.45rem;
+  bottom: 0.45rem;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 10px;
+  border: 1px solid #201c1a;
+  background: #f8f8f8;
+  color: #201c1a;
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product-info {
+  padding: 1.5rem 0.05rem 0 0;
+  color: #201c1a;
+}
+
+.product-info h3 {
+  font-family: 'Reckless', Georgia, serif;
+  font-weight: 200;
+  font-size: clamp(10px, 1.8vw, 46px);
+  line-height: 0.96;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.product-copy {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #55504b;
+}
+
+.products-nav {
+  margin: 2rem 0 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 34px;
+  height: 2px;
+  background: #d2ccc4;
+}
+
+.dot.active {
+  background: #2d2c2b;
+}
+
+.products-cta {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #2a2857;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.9rem 3.2rem;
+  border-radius: 999px;
+}
+
+.products-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products-grid::-webkit-scrollbar-thumb {
+  background: #b7b1a8;
+  border-radius: 999px;
+}
+
+.products-showcase::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products-showcase::-webkit-scrollbar-thumb {
+  background: #b7b1a8;
+  border-radius: 999px;
+}
+
+
+
+
+
+
+
+
+.fixed-right-arrow {
+  position: sticky;
+  right: 2vw;
+  top: 30%;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  border: 1.5px solid #201c1a;
+  background: #f8f8f8;
+  color: #201c1a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.fixed-right-arrow svg {
+  width: 14px;
+  height: 26px;
+  transform: rotate(180deg);
+}
+
+.fixed-right-arrow:hover {
+  background-color: #2a2857;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── DISCOVER SEARCH SECTION ───────────────────────────── */
+
+.discover-search-section {
+  border-top: 1.5px solid #2a2a2a;
+  padding: 8rem 0 7rem;
+  margin-top: 8rem;
+}
+
+.discover-search-inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.discover-badge {
+  display: inline-block;
+  background: #f07a34;
+  color: #201c1a;
+  font-family: 'Midnight';
+  font-size: clamp(20px, 4.5vw, 80px);
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem 0.1rem;
+  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  line-height: 0.92;
+  text-transform: uppercase;
+  margin-bottom: 1.35rem;
+  border: 1px solid #201c1a;
+  transform: rotate(-2deg);
+}
+
+.discover-heading {
+  font-family: 'Reckless', Georgia, serif;
+  color: #201c1a;
+  font-size: clamp(54px, 5.2vw, 86px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin: 0 0 2.8rem;
+}
+
+.discover-heading em {
+  font-style: italic;
+}
+
+.discover-input {
+  width: min(460px, 100%);
+  height: 82px;
+  border: 1.5px solid #8f8d86;
+  border-radius: 16px;
+  background: transparent;
+  padding: 0 1.8rem;
+  font-family: 'Reckless', Georgia, serif;
+  font-size: clamp(42px, 3.6vw, 64px);
+  color: #201c1a;
+  outline: none;
+}
+
+.discover-input::placeholder {
+  color: #8e8c85;
+}
+
+/* ── VIBE EXPLORE SECTION ───────────────────────────── */
+
+
+.vibe-explore-inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.vibe-input::placeholder {
+  color: #8e8c85;
+}
+
+.vibe-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: #3f3c39;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.vibe-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  max-width: 1060px;
+}
+
+.vibe-chip {
+  border: 1px solid #77746f;
+  border-radius: 13px;
+  background: #d9e5f4;
+  color: #272522;
+  font-family: 'Reckless', Georgia, serif;
+  font-size: clamp(20px, 2.4vw, 60px);
+  line-height: 1;
+  padding: 0.58rem 1.05rem 0.63rem;
+  cursor: pointer;
+}
+
+
+/* ── FOREST VALUES SECTION ───────────────────────────── */
+
+.forest-values-section {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 300vh;
+}
+
+.forest-values-section .forest-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 300vh;
+  object-fit: cover;
+  z-index: 0;
+}
+.tea-kettle {
+  position: absolute;
+  top: 0.8rem;
+  right: 20rem;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.tea-kettle img {
+  width: 12vw;
+  height: 12vw;
+  object-fit: contain;
+}
+
+.Our-origins-badge {
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 3;
+  background-color: #A2C9FC;
+  color: #201c1a;
+  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-size: clamp(20px, 4.5vw, 80px);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 0.35rem 1rem;
+  border: 1px solid #201c1a;
+  white-space: nowrap;
+}
+
+/* Centered large heading over the forest image */
+.forest-heading {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.forest-heading h1 {
+  margin: 0;
+  font-family: 'Midnight', Georgia, serif;
+  font-size: clamp(72px, 15vw, 220px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.92;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+.forest-para{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
+  text-align: center;
+}
+
+.forest-para p {
+  margin: 0;
+  font-family: 'Reckless', serif !important;
+  font-weight: 200;
+  font-size: clamp(14px, 4.5vw, 220px);
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.forest-values-overlay {
+  position: absolute;
+  bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.8rem 1.5rem 2.2rem;
+}
+
+.forest-values-title {
+  font-family: 'Midnight', Georgia, serif;
+  font-size: clamp(32px, 4vw, 58px);
+  color: #f8f6ed;
+  text-align: center;
+  line-height: 1.08;
+  max-width: 980px;
+}
+
+.forest-values-grid {
+  width: min(100%, 760px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.6rem;
+  align-items: start;
+}
+
+.forest-value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.forest-value-item img {
+  width: 8vw;
+  height: 8vw;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.forest-value-item p {
+  font-family: 'Rackless', monospace;
+  text-align: center;
+  color: #f3f2ef;
+  font-size: 1rem;
+}
+
+.forest-story-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Figtree', sans-serif;
+  color: #1f1c19;
+  background: #f3f2ef;
+  border: 1px solid #201c1a;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  padding: 0.85rem 3.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── REVIEWS SECTION ── */
+
+
+.reviews-intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5rem 4rem 2.5rem 7rem;
+  background: #FBF9EC;
+}
+
+.reviews-badge {
+  display: inline-block;
+  background-color: #73BC25;
+  color: #201c1a;
+  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-size: clamp(18px, 4vw, 62px);
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem 0.1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 7px;
+  border: 2px solid #201c1a;
+  line-height: 1;
+  transform: rotate(-2deg);
+}
+
+.reviews-heading {
+  font-family: 'Reckless', Georgia, serif;
+  font-size: clamp(36px, 4.8vw, 86px);
+  font-weight: 400;
+  color: #201c1a;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.reviews-heading em {
+  font-style: italic;
+}
+
+
+/* ── REVIEWS SHOWCASE (horizontal scroll) ──────────────────── */
+
+.reviews-showcase {
+  position: relative;
+  background: #FBF9EC;
+  padding: 2.5rem 0 4rem 3rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+}
+
+.reviews-showcase::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  width: max-content;
+}
+
+
+/* ── REVIEW CARD BASE ───────────────────────────────────── */
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100%;
+  border: 1px solid #201c1a;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 20.3125rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+/* ── CARD TOP COLOUR THEMES ─────────────────────────────── */
+
+.rv-peach  { background: #F5AF8A; }
+.rv-green1 { background: #ABDF74; }
+.rv-yellow { background: #FFD265; }
+.rv-green2 { background: #ADE674; }
+.rv-purple { background: #D9C2E1; }
+
+
+/* ── QUOTE AREA ───────────────────────────────────────── */
+
+.review-quote-area {
+  width: 100%;
+  min-height: 18.125rem;
+  aspect-ratio: 260/290;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-sizing: border-box;
+}
+
+.review-quote {
+  margin: 0;
+  font-family: 'Reckless', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.3em;
+  letter-spacing: 0.005em;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #201c1a;
+}
+
+.review-quote-large {
+  font-size: 2rem;
+  line-height: 1.14em;
+  letter-spacing: -0.005em;
+}
+
+.review-author {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.22em;
+  letter-spacing: 0.005em;
+  opacity: 0.6;
+  color: #201c1a;
+  margin: 0;
+  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/* ── PRODUCT BANNER (bottom stripe, edge-to-edge) ────────────── */
+
+.review-product-area {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
+  border: 1px solid #201c1a;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+/* Banner backgrounds */
+.rv-peach-banner  { background: #EA6D44; }
+.rv-green1-banner { background: #73BC25; }
+.rv-yellow-banner { background: #FFB502; }
+.rv-green2-banner { background: #8CC045; }
+.rv-purple-banner { background: #C790DB; }
+
+/* Left image box: square, right border divider */
+.review-product-image-box {
+  min-width: 4.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 0.25rem 0.625rem 0.625rem;
+  box-sizing: border-box;
+}
+
+.review-product-image-box img {
+  aspect-ratio: 60/60;
+  min-width: 3.75rem;
+  max-width: 3.75rem;
+  object-position: center;
+  object-fit: contain;
+  display: block;
+}
+
+/* Right info area: product name + shop button */
+.review-product-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9375rem 0.625rem 0.9375rem 0.75rem;
+  border-left: 1px solid #201c1a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.review-product-name {
+  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+/* Dark text for light banners (greens, yellow) */
+.rv-dark-text { color: #201c1a; }
+
+/* Light text for dark banners (peach orange, purple) */
+.rv-light-text { color: #ffffff; }
+
+/* Peach banner and Purple banner overrides */
+.rv-peach-banner .review-product-name,
+.rv-purple-banner .review-product-name {
+  color: #ffffff;
+}
+
+.review-shop-btn {
+  min-width: 4.375rem;
+  height: 2.375rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #201c1a;
+  border-radius: 35px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #201c1a;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(.5,0,0,1);
+  box-sizing: border-box;
+}
+
+.review-shop-btn:hover {
+  background: #ffffff !important;
+  color: #201c1a !important;
+  transform: scale(0.95);
+}
+
+
+/* ── FLOATING SCROLL ARROW ──────────────────────────────── */
+
+.reviews-scroll-arrow {
+  position: absolute;
+  right: 2.5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(44px, 4vw, 64px);
+  height: clamp(44px, 4vw, 64px);
+  border-radius: 50%;
+  border: 1.5px solid #201c1a;
+  background: #f8f6ed;
+  color: #201c1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.reviews-scroll-arrow:hover {
+  background: #201c1a;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+.reviews-scroll-arrow svg {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-arrow {
+  top: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cafe-section {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #201c1a;
+  box-sizing: border-box;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content-side {
+  background: #2a2857;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8vw 6vw;
+  box-sizing: border-box;
+}
+
+.content-side h1 {
+  font-family: 'Reckless', Georgia, serif;
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 300;
+  line-height: 1.02;
+  margin-bottom: 2rem;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.content-side p {
+  font-family: 'Figtree', sans-serif;
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.5;
+  max-width: 442px;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.btn {
+  width: 220px;
+  height: 62px;
+  background: #ffffff;
+  color: #201c1a;
+  text-decoration: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid #201c1a;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background: #2a2857;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(0.98);
+}
