@@ -901,32 +901,6 @@
 
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const header = document.querySelector("header");
-      if (!header) return;
-
-      const placeholder = document.createElement("div");
-      placeholder.className = "header-placeholder";
-      header.after(placeholder);
-
-      const startScroll = header.getBoundingClientRect().top + window.scrollY;
-
-      const updateSticky = () => {
-        if (window.scrollY >= startScroll) {
-          header.classList.add("stuck");
-          placeholder.style.height = `${header.offsetHeight}px`;
-        } else {
-          header.classList.remove("stuck");
-          placeholder.style.height = "0px";
-        }
-      };
-
-      window.addEventListener("scroll", updateSticky, { passive: true });
-      window.addEventListener("resize", updateSticky);
-      updateSticky();
-    });
-  </script>
 
 </body>
 
