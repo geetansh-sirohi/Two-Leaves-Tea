@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Two Leaves and a Bud</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,7 +29,11 @@
 
       <!-- Left Nav -->
       <nav class="header-left">
-
+       <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+         </div>
         <a class="header-nav-item" href="#">
           Shop
           <span class="nav-icon nav-circle">
@@ -110,7 +118,7 @@
 
     <!-- Left text content -->
     <div class="hero-content">
-      <h1 class="hero-headline">A cup that fits<br>the moment.</h1>
+      <h1 class="hero-headline">A cup that fits <span>the moment.</span></h1>
       <p class="hero-subtext">
         From compostable whole leaf tea sachets and iced tea to
         tea lattes and matcha, we've got something for everyone.
@@ -128,8 +136,8 @@
   <section class="intro-section">
 
     <p class="intro-tagline">
-      A <em>great</em> cup starts with a careful<br>
-      pluck - the top two leaves and a bud.
+      A <em>great</em> cup starts with a careful <span>
+      pluck - the top two leaves and a bud.</span>
     </p>
 
     <div class="best-sellers-badge">Best Sellers</div>
@@ -360,7 +368,7 @@
     <span class="Our-origins-badge">Our origins</span>
     <div class="tea-kettle"><img src="./assets/farm_kettle_icon.svg" alt="Tea kettle"></div>
     <div class="forest-heading">
-      <h1>born in <br> colorado</h1>
+      <h1>born in <span>colorado</span></h1>
     </div>
     <div class="forest-para">
       <p>
@@ -756,11 +764,13 @@
 
   
   <!-- ── GREAT TEA BANNER SECTION ── -->
-  <section class="tea-banner">
-  <div class="tea-card">
+  <section class="green-tea">
+  <div class="tea-banner"></div>
+
+<div class="tea-card">
     <h2>
-      Great Tea.<br />
-      In Good<br />
+      <span class="tea-heading-top">Great Tea. </span>
+      In Good 
       Company.
     </h2>
 
@@ -774,8 +784,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -821,7 +829,9 @@
 
       <div class="footer-menus">
         <div class="footer-menu">
-          <p class="footer-menu-label">Tea Varieties</p>
+          <p class="footer-menu-label">Tea Varieties
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Whole Leaf Tea Sachets</a></li>
             <li><a href="#">Pure Matcha</a></li>
@@ -831,7 +841,9 @@
         </div>
         
         <div class="footer-menu">
-          <p class="footer-menu-label">Collections</p>
+          <p class="footer-menu-label">Collections
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Matcha</a></li>
             <li><a href="#">Chai</a></li>
@@ -846,7 +858,9 @@
         </div>
 
         <div class="footer-menu">
-          <p class="footer-menu-label">Lattes</p>
+          <p class="footer-menu-label">Lattes
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Nice Matcha</a></li>
             <li><a href="#">Barista Matcha</a></li>
@@ -857,7 +871,9 @@
         </div>
 
         <div class="footer-menu">
-          <p class="footer-menu-label">Learn</p>
+          <p class="footer-menu-label">Learn
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Our Story</a></li>
             <li><a href="#">Our Spirit</a></li>
@@ -867,7 +883,9 @@
         </div>
 
         <div class="footer-menu">
-          <p class="footer-menu-label">Tea Journal</p>
+          <p class="footer-menu-label">Tea Journal
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">All Articles</a></li>
             <li><a href="#">Tea 101</a></li>
@@ -877,7 +895,9 @@
         </div>
 
         <div class="footer-menu">
-          <p class="footer-menu-label">Support</p>
+          <p class="footer-menu-label">Support
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Contact</a></li>
             <li><a href="#">My Account</a></li>
@@ -889,7 +909,9 @@
         </div>
 
         <div class="footer-menu">
-          <p class="footer-menu-label">Cafe & Wholesale Partners</p>
+          <p class="footer-menu-label">Cafe & Wholesale Partners
+            <i class="fa-solid fa-angle-down"></i>
+          </p>
           <ul class="footer-menu-list">
             <li><a href="#">Cafe & Wholesale Partners</a></li>
             <li><a href="#">Wholesale Login</a></li>
