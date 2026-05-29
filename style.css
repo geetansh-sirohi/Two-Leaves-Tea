@@ -3,61 +3,63 @@
    ═══════════════════════════════════════════════════════════════ */
 
 @font-face {
-  font-family: 'Reckless';
-  src: url('./assets/Reckless.woff') format('woff');
+  font-family: "Reckless";
+  src: url("./assets/fonts/Reckless.woff") format("woff");
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'Roboto Mono';
-  src: url('./assets/RobotoMono-Regular.ttf') format('truetype');
+  font-family: "Roboto Mono";
+  src: url("./assets/fonts/RobotoMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'Figtree';
-  src: url('./assets/figtree.woff2') format('woff2');
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Midnight';
-  src: url('./assets/midnight-sans.otf') format('opentype');
+  font-family: "Figtree";
+  src: url("./assets/fonts/figtree.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Midnight";
+  src: url("./assets/fonts/midnight-sans.otf") format("opentype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── RESET ───────────────────────────── */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-  background-color: #FBF9EC;
+  font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  background-color: #fbf9ec;
 }
-
 
 /* ── ANNOUNCEMENT BAR ────────────────── */
 
 .announcement-bar {
-  background-color: #2A2857;
+  background-color: #2a2857;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 8px 16px;
 }
-
 
 /* ── HEADER ──────────────────────────── */
 
@@ -136,17 +138,17 @@ header {
 }
 
 .cart-badge {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   position: absolute;
   top: 6px;
   right: -9px;
-  background-color: #FFB502;
+  background-color: #ffb502;
   color: #000000;
   font-size: 0.8rem;
   font-weight: 700;
   width: 1.2rem;
   height: 1.2rem;
-  border: 1px solid #201C1A;
+  border: 1px solid #201c1a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -163,7 +165,6 @@ header {
   display: none;
 }
 
-
 /* ── HERO ────────────────────────────── */
 
 .hero {
@@ -176,7 +177,7 @@ header {
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-  background-image: url('./assets/hero_bg_mobile.webp');
+  background-image: url("./assets/hero_bg_mobile.webp");
   background-size: 150%;
   background-position: top center;
 }
@@ -192,7 +193,7 @@ header {
 }
 
 .hero-headline {
-  font-family: 'Reckless', Georgia, 'Times New Roman', serif;
+  font-family: "Reckless", Georgia, "Times New Roman", serif;
   font-size: clamp(52px, 4rem, 120px);
   font-weight: 200;
   color: #ffffff;
@@ -200,7 +201,7 @@ header {
 }
 
 .hero-subtext {
-  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
   color: #ffffff;
@@ -209,9 +210,9 @@ header {
 
 .hero-cta {
   display: inline-block;
-  background-color: #2A2857;
+  background-color: #2a2857;
   color: #ffffff;
-  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -220,7 +221,9 @@ header {
   text-decoration: none;
   border: 1px solid #201c1a;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 .hero-cta:hover {
@@ -237,7 +240,6 @@ header {
   cursor: pointer;
 }
 
-
 /* ── INTRO / TAGLINE + BEST SELLERS ──── */
 
 .intro-section {
@@ -250,7 +252,7 @@ header {
 }
 
 .intro-tagline {
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-size: clamp(28px, 2.2rem, 90px);
   font-weight: 200;
   color: #201c1a;
@@ -264,9 +266,9 @@ header {
 
 .best-sellers-badge {
   display: inline-block;
-  background-color: #DAAEEA;
+  background-color: #daaeea;
   color: #201c1a;
-  font-family: 'Midnight', sans-serif;
+  font-family: "Midnight", sans-serif;
   font-size: clamp(20px, 2.4rem, 80px);
   font-weight: 900;
   text-transform: uppercase;
@@ -276,7 +278,6 @@ header {
   transform: rotate(-2deg);
   align-self: flex-start;
 }
-
 
 /* ── PRODUCT SHOWCASE ──────────────────  */
 
@@ -334,12 +335,29 @@ header {
   overflow: hidden;
 }
 
-.tone-green  { background: #C1EE91; }
-.tone-yellow { background: #FFD885; }
-.tone-mint   { background: #B1E8C1; }
-.tone-blue   { background: #C2E4F8; }
-.tone-peach  { background: #f2cfbf; }
-.tone-sky    { background: #9fcfeb; }
+.tone-green {
+  background: #c1ee91;
+}
+
+.tone-yellow {
+  background: #ffd885;
+}
+
+.tone-mint {
+  background: #b1e8c1;
+}
+
+.tone-blue {
+  background: #c2e4f8;
+}
+
+.tone-peach {
+  background: #f2cfbf;
+}
+
+.tone-sky {
+  background: #9fcfeb;
+}
 
 .product-top-row {
   position: absolute;
@@ -358,7 +376,7 @@ header {
   border-radius: 8px;
   padding: 0.15rem 0.4rem;
   text-transform: uppercase;
-  font-family: 'Midnight', sans-serif;
+  font-family: "Midnight", sans-serif;
   font-size: clamp(10px, 2.4rem, 18px);
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -368,14 +386,14 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   color: #201c1a;
 }
 
 .product-rating img {
-  width: 3.5vw;
-  height: 3.5vw;
+  width: 1rem;
+  height: 1rem;
   display: block;
 }
 
@@ -394,7 +412,7 @@ header {
   border: 1px solid #201c1a;
   background: #f8f8f8;
   color: #201c1a;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1rem;
   padding: 0.4rem 0.6rem;
   display: flex;
@@ -410,22 +428,22 @@ header {
 }
 
 .product-info h3 {
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-weight: 200;
   font-size: clamp(14px, 1.6rem, 86px);
-  line-height: 1.0;
+  line-height: 1;
   margin-bottom: 1.4rem;
 }
 
 .product-price {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
 
 .product-copy {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1rem;
   line-height: 1.3;
   color: #55504b;
@@ -455,7 +473,7 @@ header {
   background-color: #2a2857;
   color: #f0f0f0;
   text-decoration: none;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1.2rem;
   padding: 0.9rem 4.2rem;
   border-radius: 999px;
@@ -472,8 +490,8 @@ header {
   position: sticky;
   right: 2vw;
   top: 30%;
-  width: 4vw;
-  height: 4vw;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: 1.5px solid #201c1a;
   background: #f8f8f8;
@@ -496,7 +514,6 @@ header {
   color: #ffffff;
 }
 
-
 /* ── DISCOVER SEARCH ───────────────────  */
 
 .discover-search-section {
@@ -515,7 +532,7 @@ header {
   display: inline-block;
   background: #f07a34;
   color: #201c1a;
-  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-family: "Midnight", "Roboto Mono", sans-serif;
   font-size: clamp(20px, 3rem, 80px);
   font-weight: 900;
   text-transform: uppercase;
@@ -528,7 +545,7 @@ header {
 }
 
 .discover-heading {
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   color: #201c1a;
   font-size: clamp(28px, 7vw, 86px);
   line-height: 1.1;
@@ -548,7 +565,7 @@ header {
   border-radius: 14px;
   background: transparent;
   padding: 0 1.2rem;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-size: clamp(22px, 5vw, 64px);
   color: #201c1a;
   outline: none;
@@ -557,7 +574,6 @@ header {
 .discover-input::placeholder {
   color: #8e8c85;
 }
-
 
 /* ── VIBE EXPLORE ──────────────────────  */
 
@@ -568,7 +584,7 @@ header {
 }
 
 .vibe-label {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 0.9rem;
   color: #3f3c39;
   margin-bottom: 1.8rem;
@@ -588,14 +604,13 @@ header {
   border-radius: 13px;
   background: #d9e5f4;
   color: #272522;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-size: clamp(14px, 2.4rem, 90px);
   line-height: 1;
   padding: 0.45rem 0.7rem;
   cursor: pointer;
   white-space: nowrap;
 }
-
 
 /* ── FOREST VALUES ─────────────────────  */
 
@@ -636,9 +651,9 @@ header {
   left: 50%;
   transform: translateX(-50%) rotate(-2deg);
   z-index: 3;
-  background-color: #A2C9FC;
+  background-color: #a2c9fc;
   color: #201c1a;
-  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-family: "Midnight", "Roboto Mono", sans-serif;
   font-size: clamp(14px, 2.5rem, 80px);
   font-weight: 900;
   line-height: 1;
@@ -662,7 +677,7 @@ header {
 
 .forest-heading h1 {
   margin: 0;
-  font-family: 'Midnight', Georgia, serif;
+  font-family: "Midnight", Georgia, serif;
   font-size: clamp(48px, 6rem, 220px);
   color: #ffffff;
   text-transform: uppercase;
@@ -682,7 +697,7 @@ header {
 
 .forest-para p {
   margin: 0;
-  font-family: 'Reckless', serif;
+  font-family: "Reckless", serif;
   font-weight: 200;
   font-size: clamp(14px, 1.8rem, 220px);
   line-height: 1.35;
@@ -702,7 +717,7 @@ header {
 }
 
 .forest-values-title {
-  font-family: 'Midnight', Georgia, serif;
+  font-family: "Midnight", Georgia, serif;
   font-size: clamp(18px, 4vw, 58px);
   color: #f8f6ed;
   text-align: center;
@@ -733,12 +748,12 @@ header {
 }
 
 .forest-value-item p {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   text-align: center;
   color: #ffffff;
   font-size: clamp(9px, 2rem, 14px);
   text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   letter-spacing: 0.03em;
   line-height: 1.3;
 }
@@ -746,7 +761,7 @@ header {
 .forest-story-btn {
   display: inline-block;
   text-decoration: none;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   color: #1f1c19;
   background-color: #f3f2ef;
   border: 1px solid #201c1a;
@@ -758,9 +773,8 @@ header {
 
 .forest-story-btn:hover {
   color: #ffffff;
-  background-color: #2A2857;
+  background-color: #2a2857;
 }
-
 
 /* ── REVIEWS ───────────────────────────  */
 
@@ -769,14 +783,14 @@ header {
   flex-direction: column;
   align-items: flex-start;
   padding: 5rem 2rem 2.5rem;
-  background: #FBF9EC;
+  background: #fbf9ec;
 }
 
 .reviews-badge {
   display: inline-block;
-  background-color: #73BC25;
+  background-color: #73bc25;
   color: #201c1a;
-  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-family: "Midnight", "Roboto Mono", sans-serif;
   font-size: clamp(22px, 33rem, 62px);
   font-weight: 900;
   text-transform: uppercase;
@@ -794,7 +808,7 @@ header {
 
 .reviews-showcase {
   position: relative;
-  background: #FBF9EC;
+  background: #fbf9ec;
   padding: 2.5rem 0 4rem 2rem;
   overflow-x: auto;
   overflow-y: visible;
@@ -826,11 +840,25 @@ header {
   box-sizing: border-box;
 }
 
-.rv-peach  { background: #F5AF8A; }
-.rv-green1 { background: #ABDF74; }
-.rv-yellow { background: #FFD265; }
-.rv-green2 { background: #ADE674; }
-.rv-purple { background: #D9C2E1; }
+.rv-peach {
+  background: #f5af8a;
+}
+
+.rv-green1 {
+  background: #abdf74;
+}
+
+.rv-yellow {
+  background: #ffd265;
+}
+
+.rv-green2 {
+  background: #ade674;
+}
+
+.rv-purple {
+  background: #d9c2e1;
+}
 
 .review-quote-area {
   width: 100%;
@@ -846,7 +874,7 @@ header {
 
 .review-quote {
   margin: 0;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-weight: 300;
   line-height: 1.3em;
   letter-spacing: 0.005em;
@@ -869,7 +897,7 @@ header {
   opacity: 0.6;
   color: #201c1a;
   margin: 0;
-  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
 }
 
 .review-product-area {
@@ -884,11 +912,25 @@ header {
   box-sizing: border-box;
 }
 
-.rv-peach-banner  { background: #EA6D44; }
-.rv-green1-banner { background: #73BC25; }
-.rv-yellow-banner { background: #FFB502; }
-.rv-green2-banner { background: #8CC045; }
-.rv-purple-banner { background: #C790DB; }
+.rv-peach-banner {
+  background: #ea6d44;
+}
+
+.rv-green1-banner {
+  background: #73bc25;
+}
+
+.rv-yellow-banner {
+  background: #ffb502;
+}
+
+.rv-green2-banner {
+  background: #8cc045;
+}
+
+.rv-purple-banner {
+  background: #c790db;
+}
 
 .review-product-image-box {
   min-width: 4.625rem;
@@ -918,7 +960,7 @@ header {
 }
 
 .review-product-name {
-  font-family: 'Midnight', 'Roboto Mono', sans-serif;
+  font-family: "Midnight", "Roboto Mono", sans-serif;
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1em;
@@ -928,8 +970,13 @@ header {
   flex: 1;
 }
 
-.rv-dark-text  { color: #201c1a; }
-.rv-light-text { color: #ffffff; }
+.rv-dark-text {
+  color: #201c1a;
+}
+
+.rv-light-text {
+  color: #ffffff;
+}
 
 .rv-peach-banner .review-product-name,
 .rv-purple-banner .review-product-name {
@@ -946,13 +993,13 @@ header {
   background: #ffffff;
   border: 1px solid #201c1a;
   border-radius: 35px;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   color: #201c1a;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.3s cubic-bezier(.5, 0, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.5, 0, 0, 1);
   box-sizing: border-box;
 }
 
@@ -976,8 +1023,11 @@ header {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
-  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .reviews-scroll-arrow:hover {
@@ -993,7 +1043,6 @@ header {
 .bottom-arrow {
   top: 40%;
 }
-
 
 /* ── CAFE ──────────────────────────────  */
 
@@ -1024,7 +1073,7 @@ header {
 }
 
 .content-side h1 {
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-size: clamp(40px, 8vw, 100px);
   font-weight: 300;
   line-height: 1.02;
@@ -1033,7 +1082,7 @@ header {
 }
 
 .content-side p {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: clamp(16px, 1.2rem, 44px);
   max-width: 80vw;
   line-height: 1.5;
@@ -1042,8 +1091,8 @@ header {
 }
 
 .btn {
-  width: 220px;
-  height: 62px;
+  padding: 1rem 7rem;
+  text-wrap: nowrap;
   background: #ffffff;
   color: #201c1a;
   text-decoration: none;
@@ -1051,7 +1100,7 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   border: 1px solid #201c1a;
@@ -1065,11 +1114,10 @@ header {
   transform: scale(0.98);
 }
 
-
 /* ── BARISTA ───────────────────────────  */
 
 .barista-section {
-  background: #9F6429;
+  background: #9f6429;
   padding: 6rem 1rem 3rem;
   position: relative;
   overflow: hidden;
@@ -1082,41 +1130,41 @@ header {
 
 .barista-badge {
   display: inline-block;
-  background: #F6C28C;
+  background: #f6c28c;
   color: #201c1a;
   border: 2px solid #201c1a;
   border-radius: 10px;
   padding: 0.2rem 0.55rem;
-  font-family: 'Midnight', sans-serif;
-  font-size: clamp(18px, 4vw, 84px);
+  font-family: "Midnight", sans-serif;
+  font-size: clamp(18px, 2rem, 84px);
   margin-bottom: 1.2rem;
 }
 
 .barista-heading {
-  font-family: 'Midnight', sans-serif;
-  font-size: clamp(42px, 6vw, 90px);
+  font-family: "Midnight", sans-serif;
+  font-size: clamp(42px, 4rem, 90px);
   line-height: 0.95;
   color: #fff;
   margin-bottom: 1rem;
 }
 
 .barista-subheading {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
 }
 
 .barista-floating-badge {
   position: absolute;
-  top: 2rem;
-  right: 4rem;
-  width: 16vw;
+  top: 0;
+  right: 3rem;
+  width: 8rem;
   z-index: 10;
 }
 
 .barista-slider-box {
-  background: #F3C48F;
+  background: #f3c48f;
   border: 1px solid #201c1a;
   border-radius: 14px;
   display: flex;
@@ -1155,8 +1203,13 @@ header {
   height: 20px;
 }
 
-.barista-arrow.left  { left: 1rem; }
-.barista-arrow.right { right: 1rem; }
+.barista-arrow.left {
+  left: 1rem;
+}
+
+.barista-arrow.right {
+  right: 1rem;
+}
 
 .barista-product-image img {
   width: 80vw;
@@ -1173,18 +1226,18 @@ header {
 
 .barista-small-tag {
   display: inline-block;
-  background: #F0A35A;
+  background: #f0a35a;
   border: 1px solid #201c1a;
   border-radius: 4px;
   padding: 0.02rem 0.5rem;
-  font-family: 'Midnight', sans-serif;
+  font-family: "Midnight", sans-serif;
   font-size: 3rem;
   margin-bottom: 1rem;
   transform: rotate(-2deg);
 }
 
 .barista-product-content h3 {
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   font-size: 3rem;
   line-height: 0.95;
   font-weight: 300;
@@ -1193,7 +1246,7 @@ header {
 }
 
 .barista-product-content p {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #201c1a;
@@ -1204,14 +1257,15 @@ header {
   border-radius: 999px;
   border: 1px solid #201c1a;
   min-width: 30vw;
-  padding: 1rem;
+  padding: 1rem 7rem;
+  text-wrap: nowrap;
   background: #f3f3f3;
   color: #201c1a;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 0.95rem;
   transition: 0.25s ease;
 }
@@ -1222,11 +1276,10 @@ header {
   transform: scale(0.98);
 }
 
-
 /* ── TEA JOURNAL ───────────────────────  */
 
 .journal-section {
-  background: #FBF9EC;
+  background: #fbf9ec;
   color: hsl(20, 10%, 11%);
   padding: 7rem 0;
   border-top: 1px solid #201c1a;
@@ -1243,10 +1296,10 @@ header {
 
 .journal-badge {
   display: inline-block;
-  background-color: #FFB500;
+  background-color: #ffb500;
   color: #201c1a;
-  font-family: 'Midnight', 'Roboto Mono', sans-serif;
-  font-size: clamp(18px, 4vw, 84px);
+  font-family: "Midnight", "Roboto Mono", sans-serif;
+  font-size: clamp(18px, 3rem, 84px);
   font-weight: 900;
   text-transform: uppercase;
   padding: 0.15rem 0.55rem 0.1rem;
@@ -1258,9 +1311,9 @@ header {
 }
 
 .journal-heading {
-  font-family: 'Reckless', Georgia, serif;
-  font-size: clamp(28px, 5.2vw, 60px);
-  font-weight: 300;
+  font-family: "Reckless", Georgia, serif;
+  font-size: clamp(28px, 1.6rem, 60px);
+  font-weight: 200;
   line-height: 1.2;
   margin: 0;
   letter-spacing: -0.01em;
@@ -1295,7 +1348,7 @@ header {
   border-radius: 14px;
   overflow: hidden;
   flex-shrink: 0;
-  background-color: #2A2857;
+  background-color: #2a2857;
 }
 
 .journal-card-media {
@@ -1320,18 +1373,18 @@ header {
   border: 1px solid #201c1a;
   border-radius: 6px;
   padding: 0.25rem 0.45rem;
-  font-family: 'Midnight', sans-serif;
+  font-family: "Midnight", sans-serif;
   font-size: 1.5rem;
   z-index: 2;
 }
 
 .journal-card-info {
   padding: 1.4rem 1rem;
-  background-color: #C0DBFF;
+  background-color: #c0dbff;
 }
 
 .journal-card-title {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.1rem;
   line-height: 1.2;
   text-transform: uppercase;
@@ -1374,13 +1427,13 @@ header {
   width: 310px;
   height: 58px;
   border-radius: 999px;
-  background: #2A2857;
+  background: #2a2857;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 1.2rem;
   transition: 0.25s ease;
 }
@@ -1390,7 +1443,6 @@ header {
   color: #050020;
   transform: scale(0.98);
 }
-
 
 /* ── TEA BANNER ────────────────────────  */
 
@@ -1402,8 +1454,8 @@ header {
 
 .tea-banner {
   width: 100%;
-  min-height: 45vw;
-  background-image: url('./assets/footer_banner.webp');
+  min-height: 60vh;
+  background-image: url("./assets/footer_banner.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1428,7 +1480,7 @@ header {
   font-size: 2.5rem;
   line-height: 1.05;
   font-weight: 200;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
 }
 
 .tea-card-bottom {
@@ -1448,14 +1500,15 @@ header {
 .tea-btn {
   display: inline-flex;
   justify-content: center;
-  padding: 16px 56px;
+  padding: 1rem 7rem;
+  text-wrap: nowrap;
   background: #e8e8e8;
   color: #1f1f1f;
   border-radius: 999px;
   border: 1px solid #2c2c2c;
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   transition: 0.3s ease;
 }
 
@@ -1465,12 +1518,11 @@ header {
   transform: scale(0.98);
 }
 
-
 /* ── FOOTER ────────────────────────────  */
 
 .footer {
   width: 100%;
-  background-color: #C0D8FC;
+  background-color: #c0d8fc;
   border-top: 1px solid #201c1a;
   padding: 32px 0 0;
 }
@@ -1492,7 +1544,7 @@ header {
   font-size: 2rem;
   line-height: 1;
   text-transform: uppercase;
-  font-family: 'Midnight', sans-serif;
+  font-family: "Midnight", sans-serif;
   color: #1d1d1d;
   margin-bottom: 1.5rem;
 }
@@ -1501,7 +1553,7 @@ header {
   font-size: 1.5rem;
   line-height: 1.15;
   color: #464646;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   margin-bottom: 2rem;
 }
 
@@ -1544,7 +1596,7 @@ header {
 }
 
 .footer-form-submit:hover {
-  background-color: #FFB500;
+  background-color: #ffb500;
   color: #000000;
 }
 
@@ -1607,7 +1659,7 @@ header {
   line-height: 1.2;
   margin: 0;
   padding: 18px 20px;
-  font-family: 'Reckless', Georgia, serif;
+  font-family: "Reckless", Georgia, serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1621,9 +1673,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #C0DBFF;
+  background-color: #c0dbff;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -1653,10 +1705,10 @@ header {
 
 .footer-socket {
   width: 100%;
-  background-color: #C0D8FC;
+  background-color: #c0d8fc;
   overflow: hidden;
   position: relative;
-  padding-top: 7vw;
+  padding-top: 8rem;
 }
 
 .footer-socket-ctr {
@@ -1709,7 +1761,7 @@ header {
   transform: translateX(-50%);
   z-index: 3;
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 0.7rem;
   line-height: 1.5;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1727,13 +1779,11 @@ header {
   text-decoration: underline;
 }
 
-
 /* ═══════════════════════════════════════
    DESKTOP — @media (min-width: 1024px)
 ═══════════════════════════════════════ */
 
 @media (min-width: 1024px) {
-
   /* ── Header ── */
 
   header {
@@ -1748,7 +1798,7 @@ header {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-family: 'Reckless', Georgia, serif;
+    font-family: "Reckless", Georgia, serif;
     font-size: 1.5rem;
     font-weight: 300;
     color: #272321;
@@ -1770,8 +1820,8 @@ header {
     display: flex;
     width: 1.4vw;
     height: 1.4vw;
-    border: 1.5px solid #2A2624;
-    background-color: #C0DBFF;
+    border: 1.5px solid #2a2624;
+    background-color: #c0dbff;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -1784,7 +1834,7 @@ header {
   .header-right a {
     display: block;
     font-size: 0.8rem;
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     font-weight: 500;
     text-transform: uppercase;
     color: #201c1a;
@@ -1978,7 +2028,7 @@ header {
 
   .reviews-heading {
     display: block;
-    font-family: 'Reckless', Georgia, serif;
+    font-family: "Reckless", Georgia, serif;
     font-size: clamp(36px, 4.8vw, 86px);
     font-weight: 400;
     color: #201c1a;
@@ -2020,7 +2070,9 @@ header {
   }
 
   @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .barista-slider-box {
@@ -2037,7 +2089,7 @@ header {
   }
 
   .barista-product-image::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 320px;
     height: 20px;
