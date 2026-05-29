@@ -259,14 +259,15 @@ header {
   padding: 1rem 4rem;
   border-radius: 100px;
   text-decoration: none;
-  border: none;
+  border: 1px solid #201c1a;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .hero-cta:hover {
-  background: #3a3330;
-  transform: translateY(-2px);
+  color: #000000;
+  background-color: white;
+  border: 1px solid #201c1a;
 }
 .drop-down {
   position: absolute;
@@ -506,8 +507,14 @@ header {
   font-size: 1.2rem;
   padding: 0.9rem 3.2rem;
   border-radius: 999px;
+  border: 1px solid #201c1a;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
-
+.products-cta:hover{
+  color: #000000;
+  background-color: white;
+  border: 1px solid #201c1a;
+}
 .products-grid::-webkit-scrollbar {
   height: 8px;
 }
@@ -830,11 +837,16 @@ header {
   text-decoration: none;
   font-family: 'Figtree', sans-serif;
   color: #1f1c19;
-  background: #f3f2ef;
+  background-color: #f3f2ef;
   border: 1px solid #201c1a;
   border-radius: 999px;
   font-size: 1.2rem;
-  padding: 0.85rem 3.3rem;
+  padding: 0.85rem 3.3rem;transition: background 0.2s ease, transform 0.15s ease;
+}
+.forest-story-btn:hover{
+  color: #ffffff;
+  background-color: #2A2857;
+  border: 1px solid #201c1a;
 }
 
 
@@ -1265,7 +1277,7 @@ header {
 .btn:hover {
   background: #2a2857;
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: #000000;
   transform: scale(0.98);
 }
 
@@ -1504,8 +1516,10 @@ padding: 1rem 0 ;
   height:20px;
 }
 .barista-btn:hover{
-  background:#201c1a;
-  color:#fff;
+  background-color: #2a2857;
+  color: #ffffff;
+  border-color: #000000;
+  transform: scale(0.98);
 }
 
 
@@ -1710,7 +1724,10 @@ padding: 1rem 0 ;
 }
 
 .journal-cta-btn:hover{
-  transform:scale(0.98);
+  background-color: #ffffff;
+  color: #050020;
+  border-color: #000000;
+  transform: scale(0.98);
 }
 
 
@@ -1831,6 +1848,10 @@ padding: 1rem 0 ;
 
 .tea-btn:hover {
   transform: translateY(-2px);
+  background-color: #2a2857;
+  color: #ffffff;
+  border-color: #000000;
+  transform: scale(0.98);
 }
 
 
