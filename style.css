@@ -240,7 +240,7 @@ header {
 
 .drop-down {
   position: absolute;
-  bottom: -30px;
+  bottom: -10vw;
   right: 0;
   transform: translateX(-50%);
   z-index: 20;
